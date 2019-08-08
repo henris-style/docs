@@ -6,7 +6,11 @@
 	"directories": {
 		"doc": "docs"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"@henris/next": "^1.0.18",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^7.1.0"
+	},
 	"devDependencies": {
 		"vuepress": "^1.0.1"
 	},

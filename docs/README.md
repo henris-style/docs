@@ -1,6 +1,7 @@
 ---
 home: true
-heroImage: /hero.png
+heroText: Henri's
+tagline: Welcome to the Henri's documentation..
 actionText: Get Started →
 actionLink: /guide/
 features:
