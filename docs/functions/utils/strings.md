@@ -4,6 +4,16 @@
 
 Split a string by a given string into a list.
 
+```scss
+
+$string: 'Henri Matisse, was a French painter from Nice';
+
+$list: str-split($string, ','); 
+
+// returns ('Henri Matisse', 'was a French painter from Nice');
+
+```
+
 ## str-splice (alias for str-split)
 
 Split a string by a given string into a list.
@@ -12,9 +22,39 @@ Split a string by a given string into a list.
 
 Replace a certain string by another string in a string.
 
+```scss
+
+$string: 'Henri Matisse, was a French painter from Nice';
+$list: str-replace($string, 'Nice', 'Paris'); 
+
+// 'Henri Matisse, was a French painter from Paris';
+
+```
+
+```scss
+
+$string: 'Henri Matisse, was a French painter from Nice';
+$needles: ('Henri', 'Nice');
+$replacers: ('Henk', 'Paris');
+
+$list: str-replace($string, $needles, $replacers); 
+
+// 'Henk Matisse, was a French painter from Paris';
+
+```
+
 ## str-replace-func
 
-The actual replacing function used in str-replace, only accepts strings.
+The actual replacing function used in str-replace, only accepts strings. 
+
+```scss
+
+$string: 'Henri Matisse, was a French painter from Nice';
+$list: str-replace($string, 'Nice', 'Paris'); 
+
+// 'Henri Matisse, was a French painter from Paris';
+
+```
 
 ## to-str
 

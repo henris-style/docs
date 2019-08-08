@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .dropdown-enter, .dropdown-leave-to {
   height: 0 !important;
 }

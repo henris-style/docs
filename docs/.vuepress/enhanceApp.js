@@ -4,5 +4,5 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  require('./theme/styles/index.scss')
+  require('./theme/styles/_app.scss')
 }

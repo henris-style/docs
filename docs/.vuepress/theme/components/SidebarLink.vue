@@ -94,10 +94,16 @@ function renderExternal (h, to, text) {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .sidebar .sidebar-sub-headers {
   padding-left: 1rem;
   font-size: 0.95em;
+}
+.sidebar .sidebar-sub-header{
+  display: block; 
+}
+.sidebar-links{
+  li{ display: block; }
 }
 
 a.sidebar-link {

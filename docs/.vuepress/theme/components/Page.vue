@@ -193,8 +193,7 @@ function flatten (items, res) {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
-@import '../styles/wrapper.scss';
+@import '../styles/tools';
 
 .page {
   padding-bottom: 2rem;

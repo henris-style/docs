@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .sidebar-group {
   .sidebar-group {
     padding-left: 0.5em;

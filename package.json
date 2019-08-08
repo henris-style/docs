@@ -12,6 +12,8 @@
 		"sass-loader": "^7.1.0"
 	},
 	"devDependencies": {
+		"@henris/custom": "0.0.2",
+		"guyn": "0.0.10",
 		"vuepress": "^1.0.1"
 	},
 	"scripts": {

@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .sidebar {
   ul {
     padding: 0;

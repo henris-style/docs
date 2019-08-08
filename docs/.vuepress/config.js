@@ -1,33 +1,46 @@
 // .vuepress/config.js
 module.exports = {
-  themeConfig: {
+	themeConfig: {
 		sidebar: [
-      {
-        title: 'Functions',   // required
-        path: '/functions/',      // optional, which should be a absolute path.
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
-        children: [
-          '/functions/utils/characters',
-          '/functions/utils/strings'
-        ]
-      },
-      {
-        title: 'Mixins',
-        children: [ /* ... */ ]
-      },
-      {
-        title: 'Color',
-        children: [ /* ... */ ]
-      },
-      {
-        title: 'Animation',
-        children: [ /* ... */ ]
-      },
-      {
-        title: 'Grid',
-        children: [ /* ... */ ]
-      }
-    ]
-  }
-}
+			{
+				title: 'Functions',
+				path: '/functions/',
+				collapsable: false,
+				sidebarDepth: 1,
+				children: [
+					'/functions/utils/characters',
+					'/functions/utils/is',
+					'/functions/utils/list',
+					'/functions/utils/maps',
+					'/functions/utils/size',
+					'/functions/utils/strings',
+					'/functions/utils/units'
+				]
+			},
+			{
+				title: 'Mixins',
+				collapsable: false,
+
+				children: ['mixins/utils/family','mixins/utils/wildcard','mixins/utils/parent']
+			},
+			{
+				title: 'Color',
+				children: [
+					/* ... */
+				]
+			},
+			{
+				title: 'Animation',
+				children: [
+					/* ... */
+				]
+			},
+			{
+				title: 'Grid',
+				children: [
+					/* ... */
+				]
+			}
+		]
+	}
+};

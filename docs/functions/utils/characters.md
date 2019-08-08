@@ -18,7 +18,6 @@ example:
 @debug '| #{add-length('The Sass Toolbelt\'s,20)} |';
 
 /* 
-output: 
 |                     |
 | Henris              |
 | The Sass Toolbelt   |
@@ -40,7 +39,8 @@ example:
 ```scss
 add-zeros(1,3);
 
-// output: 001
+// 001
+
 ```
 
 ## add-character
@@ -63,7 +63,6 @@ example:
 @debug '| #{add-character('-',20)} |';
 
 /* 
-output: 
 | -------------------- |
 |                      |
 | Henris               |
@@ -90,9 +89,8 @@ example:
 
 $string: safe-characters('The quïck brown föx jumps over thé lazy døg');
 
-/* 
-output: The quick brown fox jumps over the lazy dog
-*/
+// 'The quick brown fox jumps over the lazy dog'
+
 ```
 
 ## character-set
@@ -121,7 +119,8 @@ Filters out all characters which arent allowed.
 
 $string: allowed-characters('The quïck brown föx jumps over thé lazy døg',character-set('a-z'));
 
-/* 
-output: hequckbrownfxjumpsoverthlazydg // Filters out spaces and special characters, because those are not in a-z list.
-*/
+// hequckbrownfxjumpsoverthlazydg 
+
+// Filters out spaces and special characters, because those are not in a-z list.
+
 ```

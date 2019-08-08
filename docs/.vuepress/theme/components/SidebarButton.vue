@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .sidebar-button {
   cursor: pointer;
   display: none;

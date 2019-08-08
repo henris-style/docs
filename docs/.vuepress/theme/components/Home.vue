@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .home {
   padding: $navbarHeight 2rem 0;
   max-width: 960px;

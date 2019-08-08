@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .algolia-search-wrapper {
   & > span {
     vertical-align: middle;

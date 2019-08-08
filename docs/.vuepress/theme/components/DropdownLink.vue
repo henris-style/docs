@@ -78,7 +78,7 @@ export default {
 
 <style lang="scss">
 
-@import '../styles/config';
+@import '../styles/tools';
 .dropdown-wrapper {
   cursor: pointer;
   .dropdown-title {

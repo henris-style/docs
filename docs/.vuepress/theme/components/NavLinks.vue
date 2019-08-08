@@ -116,7 +116,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/config';
+@import '../styles/tools';
 .nav-links {
   display: inline-block;
   a {
