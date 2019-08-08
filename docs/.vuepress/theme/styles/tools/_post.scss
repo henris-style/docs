@@ -1,0 +1,64 @@
+// Basic colors
+$color-background: color(White);
+$color-text: color(Black);
+$color-border: color(Black, 0.25);
+$color-primary: color(Purple);
+$color-secondary: color(Blue);
+$color-warning: color(Orange);
+$color-success: color(Green);
+$color-error: color(Red);
+
+
+$contentClass: '.theme-default-content';
+
+// Color configuration
+$accentColor: color(Green);
+$textColor:color(Dark);
+$borderColor: color(IceLight);
+$codeBgColor:  color(Dark);
+$arrowBgColor:  color(Dark);
+
+// Layout configuration
+$navbarHeight: 3.6rem;
+$sidebarWidth: 20rem;
+$contentWidth: 740px;
+
+$MQNarrow: 959px;
+$MQMobile: 719px;
+$MQMobileNarrow: 419px;
+
+$lineNumbersWrapperWidth: 3.5rem;
+$codeLang: (
+	'js',
+	'ts',
+	'html',
+	'md',
+	'vue',
+	'css',
+	'sass',
+	'scss',
+	'less',
+	'stylus',
+	'go',
+	'java',
+	'c',
+	'sh',
+	'yaml',
+	'py',
+	'docker',
+	'dockerfile',
+	'makefile'
+);
+
+
+%wrapper {
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  @media (max-width: $MQNarrow) {
+    padding: 2rem;
+  }
+  @media (max-width: $MQMobileNarrow) {
+    padding: 1.5rem;
+  }
+}
