@@ -1,0 +1,81 @@
+.sidebar {
+	width: $sidebarWidth;
+	position: fixed;
+	z-index: 10;
+	margin: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	background-color: color(Dark, 0.15);
+	color: color(Dark);
+  overflow-y: auto;
+  @media #{$small-only}{
+		padding-top: $navbarHeight;
+    background-color: color(Dark);
+		color: color(White);
+		transition: clip-path $base-transition $base-cubic-bezier;
+		clip-path: inset(0 100% 0 0%);
+		.sidebar-open & {
+			clip-path: inset(0 0% 0 0%);
+		}
+  }
+	&-links {
+		display: block;
+		margin: 0;
+		li {
+			display: block;
+		}
+	}
+	&-link {
+		display: block;
+		padding: 0.25rem 2rem;
+		color: currentColor;
+		&.active {
+			color: $accentColor;
+		}
+	}
+	&-heading{
+		padding: .5rem 2rem;
+		display: block; 
+		font-weight: bold;
+	}
+	&-group{
+		margin-top: 1rem;
+	}
+	&-group-items{
+		// border: 1px solid blue;
+	}
+	&-sub-headers {
+		padding-left: 1rem;
+		display: block;
+		border: 1px slid red;
+	}
+	&-button {
+		cursor: pointer;
+		position: absolute;
+		background-color: color(Blue);
+		width:$navbarHeight;
+		height:$navbarHeight;
+		right: 0;
+		top: 0;
+		border: none; 
+		transition: clip-path $base-transition $base-cubic-bezier;
+		clip-path: inset(0 0 0 100%);
+		&:focus,&:hover{
+			outline: none; 
+		background-color: color(BlueDark);
+		}
+		span {
+			@include menu();
+		}
+		.sidebar-open &{
+			span{
+				@include menu-close();
+			}
+		}
+		@media #{$small-only}{
+			clip-path: inset(0 0 0 0);
+		}
+	}
+}

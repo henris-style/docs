@@ -8,7 +8,13 @@ module.exports = {
         'guide/getting-started',
         'guide/installation'
       ]
-    },
+    },{
+      title: 'Installation',
+      collapsable: false,
+      children: [
+        'installation/nuxt',
+        'installation/vuepress',
+      ]    },
 			{
 				title: 'Functions',
 				path: '/functions/',

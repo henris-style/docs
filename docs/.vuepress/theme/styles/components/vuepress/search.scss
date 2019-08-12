@@ -1,0 +1,25 @@
+.search-box {
+	position: fixed !important;
+	top: 0;
+	right: 0;
+	min-width: $navbarHeight;
+	height: $navbarHeight;
+	background-color: color(Yellow);
+	@media #{$small-only} {
+		right: $navbarHeight;
+	}
+	& > input {
+		position: relative;
+		left: 50%;
+		top: 50%;
+		font-size: 1rem;
+		font-weight: bold;
+		transform: translateY(-50%);
+		background: none !important;
+		background-color: transparent !important;
+		&:focus {
+			border: none;
+			color: color(Dark);
+		}
+	}
+}

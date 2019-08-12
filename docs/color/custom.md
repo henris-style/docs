@@ -40,8 +40,14 @@ $default-color-set: (
 	"fireRed": #ed1f35
 );
 // NB The new default colorset has to at least contain Black and White.
+```
 
-// Choose a unique variable name to create a new colorset:
+## Add Custom colors
+
+To overwrite the default colorset and add your own:
+
+```scss
+// Define the colors in $custom-colors
 $custom-colors: (
 	"Black": #111111,
 	"White": #f7f7f7,
@@ -50,16 +56,14 @@ $custom-colors: (
 );
 ```
 
-## Overwrite
-
-To overwrite the default colorset and add your own:
+If you want to add colors after defining the $custom-colors. You can add them like:
 
 ```scss
-$default-color-set: "vibrant";
+$custom-colors: add-color($custom-colors,'Blue', #2100FF);
 ```
 
 ::: tip
-Include this before the import of `@import '~henris'`
+Include this before the import of `@import '~henris/next'`
 :::
 
 ## SCSS color function

@@ -1,0 +1,14 @@
+
+.navbar {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $navbarHeight;
+	padding: 1rem;
+	@media #{$medium-up} {
+		width: calc(100% - #{$sidebarWidth});
+		left: #{$sidebarWidth};
+	}
+}

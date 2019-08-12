@@ -174,7 +174,7 @@ div[class~='language-php']:before {
 $color_1: color(Ice);
 $color_2: color(IceDark);
 $color_3: color(Magenta);
-$color_4: color(SkyBlue);
+$color_4: color(Skyblue);
 $color_5: color(OrangeLight);
 $color_6: color(Yellow);
 $color_7: color(MagentaLight);
@@ -241,7 +241,7 @@ pre[class*='language-'] {
 	}
 }
 .token.comment {
-	color: $color_2;
+	color: color(White, 0.5);
 }
 .token.block-comment {
 	color: $color_2;
