@@ -21,12 +21,31 @@
 		padding: 2rem;
 	}
 
+	ol,
 	ul {
 		li {
 			display: block;
 			line-height: 1.75;
 			&:before {
 				content: '- ';
+			}
+		}
+	}
+	ol {
+		counter-reset: list;
+		li {
+			counter-increment: list;
+			&:before {
+				content: counter(list) '. ';
+			}
+			ol {
+				counter-reset: list2;
+				li {
+					counter-increment: list2;
+					&:before {
+						content: counter(list) '.' counter(list2) '. ' ;
+					}
+				}
 			}
 		}
 	}

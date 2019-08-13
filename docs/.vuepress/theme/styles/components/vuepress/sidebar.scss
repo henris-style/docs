@@ -23,8 +23,11 @@
 		clip-path: inset(0 100% 0 0%);
 		transition: clip-path $base-transition $base-cubic-bezier;
 		padding-top: $navbarHeight;
+		pointer-events: none;
+		animation: iosFix2 0.5s;
 		.sidebar-open & {
-			clip-path: inset(0 0% 0 0%);
+			clip-path: inset(0 0% 0 0%);		animation: iosFix1 0.5s;
+			pointer-events: all;
 		}
 	}
 	&__links {
@@ -68,7 +71,6 @@
 		background-color: color(Dark);
 		clip-path: inset(0 0 0 100%); 
 		transition: clip-path $base-transition $base-cubic-bezier;
-		animation: iosFix1 0.5s;
 		cursor: pointer;
 		&:focus,&:hover{
 			outline: none; 
@@ -84,7 +86,6 @@
 		}
 		@media #{$small-only}{
 			clip-path: inset(0 0 0 0);		
-			animation: iosFix2 0.5s;
 		}
 	}
 }
