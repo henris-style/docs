@@ -1,10 +1,8 @@
-@keyframes IOSfixOpen{
-	0%{ top: 0; }
-	100%{ top: 0.01px; }
+@keyframes iosFix1{
+	to{ top: 0.01px; }
 }
-@keyframes IOSfixClose{
-	0%{ top: 0.01px; }
-	100%{ top: 0; }
+@keyframes iosFix2{
+	to{ top: 0.01px; }
 }
 
 .sidebar {
@@ -70,7 +68,7 @@
 		background-color: color(Dark);
 		clip-path: inset(0 0 0 100%); 
 		transition: clip-path $base-transition $base-cubic-bezier;
-		animation: IOSfixClose $base-transition forwards;
+		animation: iosFix1 0.5s;
 		cursor: pointer;
 		&:focus,&:hover{
 			outline: none; 
@@ -85,8 +83,8 @@
 			}
 		}
 		@media #{$small-only}{
-			clip-path: inset(0 0 0 0);
-			animation: IOSfixOpen $base-transition forwards;
+			clip-path: inset(0 0 0 0);		
+			animation: iosFix2 0.5s;
 		}
 	}
 }
