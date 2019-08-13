@@ -3,3 +3,12 @@ p {
 		margin-top: 1rem;
 	}
 }
+
+
+p,div {
+	& + h3,
+	& + h2,
+	& + h4{
+		margin-top: calc(#{grid(0.5)} + 2rem);
+	}
+}
