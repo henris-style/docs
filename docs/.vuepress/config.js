@@ -1,23 +1,40 @@
 // .vuepress/config.js
 module.exports = {
 	themeConfig: {
-		sidebar: [{
-      title: 'Guide',
-      collapsable: false,
-      children: [
-        'guide/getting-started',
-        'guide/installation'
-      ]
-    },{
-      title: 'Installation',
-      collapsable: false,
-      children: [
-        'installation/nuxt',
-        'installation/vuepress',
-      ]    },
+		sidebar: [
+			{
+				title: 'Guide',
+				collapsable: false,
+				children: ['guide/getting-started', 'guide/installation']
+			},
+			{
+				title: 'Installation',
+				collapsable: false,
+				children: ['installation/nuxt', 'installation/vuepress', 'installation/output', 'installation/settings']
+			},
+			{
+				title: 'Grid',
+				collapsable: false,
+				children: ['grid/basic', 'grid/classes', 'grid/structure', 'grid/tips']
+			},
+			{
+				title: 'Color',
+				collapsable: false,
+				children: ['color/custom']
+			},
+			{
+				title: 'Animation',
+				collapsable: false,
+				children: [
+					/* ... */
+				]
+			},
+			{
+				title: 'Typography',
+				path: '/typography/'
+			},
 			{
 				title: 'Functions',
-				// path: '/functions/',
 				collapsable: false,
 				sidebarDepth: 1,
 				children: [
@@ -33,45 +50,23 @@ module.exports = {
 			{
 				title: 'Mixins',
 				collapsable: false,
-				children: ['mixins/utils/family','mixins/utils/wildcard','mixins/utils/parent','mixins/styling/menu']
-			},
-			{
-				title: 'Color',
-				collapsable: false,
 				children: [
-          'color/custom'
+					'mixins/utils/family',
+					'mixins/utils/wildcard',
+					'mixins/utils/parent',
+					'mixins/styling/menu'
 				]
 			},
+
 			{
-				title: 'Animation',
+				title: 'Styled',
 				collapsable: false,
 				children: [
-					/* ... */
-				]
-			},
-			{
-				title: 'Typography',
-				path: '/typography/',
-			},
-			{
-				title: 'Basics',
-				collapsable: false,
-				children: [
-          'basic/buttons',
-          'basic/forms',
-          'basic/output',
-          'basic/patterns',
-          'basic/settings'
-				]
-			},
-			{
-				title: 'Grid',
-				collapsable: false,
-				children: [
-          'grid/classes'
+					'basic/buttons',
+					'basic/forms',
+					'basic/patterns'
 				]
 			}
-			
 		]
 	}
 };

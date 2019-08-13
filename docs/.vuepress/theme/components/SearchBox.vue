@@ -20,7 +20,8 @@
 			class="search-box__suggestions"
 			:class="{
 				'align-right': alignRight,
-				'suggestions--active': showSuggestions
+				'suggestions--active': showSuggestions,
+				'search-box__suggestions--active': focused
 			}"
 			@mouseleave="unfocus"
 		>
@@ -36,7 +37,7 @@
 						s.title || s.path
 					}}</span>
 					<span class="search-box__header header" v-if="s.header"
-						>&gt; {{ s.header.title }}</span
+						>{{ s.header.title }}</span
 					>
 				</a>
 			</li>

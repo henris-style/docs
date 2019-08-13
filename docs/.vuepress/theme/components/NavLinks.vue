@@ -1,11 +1,11 @@
 <template>
   <nav
-    class="nav-links"
+    class="nav__links"
     v-if="userLinks.length || repoLink"
   >
     <!-- user links -->
     <div
-      class="nav-item"
+      class="nav__item"
       v-for="item in userLinks"
       :key="item.link"
     >

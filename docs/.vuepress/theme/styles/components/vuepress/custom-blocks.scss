@@ -1,33 +1,35 @@
 .custom-block {
+	padding: #{($mobile-padding / 2 )} $mobile-padding;
 	.custom-block-title {
 		font-weight: 600;
-		margin-bottom: -0.4rem;
+		// margin-bottom: -0.4rem;
 	}
-	&.tip, &.warning, &.danger {
-		padding: 0.1rem 1.5rem;
+	&.tip,
+	&.warning,
+	&.danger {
 		border-left-width: 0.5rem;
 		border-left-style: solid;
 		margin: 1rem 0;
 	}
 	&.tip {
-		border-color: #42b983;
-		background-color: #f3f5f7;
+		border-color: color(Green);
+		background-color: color(IceLight);
 	}
 	&.warning {
-		border-color: darken(#ffe564, 35%);
-		background-color: rgba(255, 229, 100, 0.3);
-		color: darken(#ffe564, 70%);
+		border-color: color(Yellow);
+		background-color: color(Brown, 0.25);
+		color: color(Brown);
 		.custom-block-title {
-			color: darken(#ffe564, 50%);
+			color: color(Brown);
 		}
 		a {
 			color: $textColor;
 		}
 	}
 	&.danger {
-		border-color: darken(red, 20%);
-		background-color: #ffe6e6;
-		color: darken(red, 70%);
+		border-color: color(Red, 0.2);
+		background-color: color(White);
+		color: darken(Red, 0.2);
 		.custom-block-title {
 			color: darken(red, 40%);
 		}

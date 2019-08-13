@@ -1,6 +1,13 @@
 .content__default {
+	overflow-x: scroll;
 	table {
 		border: 1px solid color(IceLight);
+		@media #{$small-only} {
+			display: block;
+			min-width: calc(100vw - #{$mobile-padding * 2});
+			max-width: calc(100vw - #{$mobile-padding * 2});
+			overflow-x: auto;
+		}
 		td,
 		th {
 			padding: 1rem;
@@ -12,6 +19,33 @@
 			tr {
 				&:nth-child(odd) {
 					background-color: color(IceLight, 0.25);
+				}
+			}
+		}
+	}
+
+	@media #{$small-only} {
+		table {
+			display: flex;
+			thead {
+				display: flex;
+				flex-shrink: 0;
+				flex-direction: column;
+				tr {
+					display: flex;
+					flex-direction: column;
+					th{ text-align: left;}
+				}
+			}
+			tbody {
+				display: flex;
+				flex-grow: 1;
+				flex-wrap: nowrap;
+				overflow: scroll;
+				tr {
+					display: flex;
+					flex-direction: column;
+					td{ white-space: nowrap; }
 				}
 			}
 		}
@@ -43,7 +77,7 @@
 				li {
 					counter-increment: list2;
 					&:before {
-						content: counter(list) '.' counter(list2) '. ' ;
+						content: counter(list) '.' counter(list2) '. ';
 					}
 				}
 			}

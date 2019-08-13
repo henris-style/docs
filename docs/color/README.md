@@ -137,4 +137,3 @@ $color-social: (
 ## Default colorset
 
 These are the colors set by default in Henris. All colors can be easily overwritten as you can read above. 
-<color-palette />

@@ -1,5 +1,5 @@
 .search-box {
-	position: fixed !important;
+	position: fixed;
 	top: 0;
 	right: 0;
 	min-width: $navbarHeight;
@@ -58,7 +58,7 @@
 		padding-left: $navbarHeight;
 		padding-right: 0;
 		&::placeholder {
-			color: color(Black, 0.25);
+			color: color(Dark);
 		}
 		&:focus {
 			outline: none;
@@ -81,7 +81,15 @@
 		border-radius: 0;
 		background-color: color(Dark);
 		padding: 0;
-		// position: fixed; right: $navbarHeight;
+		clip-path: inset(0 0 0 100%);
+		transition: clip-path $base-transition $base-cubic-bezier;
+		animation: iosFix1 $base-transition;
+		pointer-events: none;
+		&--active {
+			clip-path: inset(0 0 0 0%);
+			animation: iosFix1 $base-transition;
+			pointer-events: all;
+		}
 	}
 	&__suggestion {
 		display: block;
@@ -96,10 +104,25 @@
 	&__link {
 		display: block;
 		color: currentColor;
-		padding: 0.5rem 1rem;
+		padding: 1rem 1rem;
 		&:hover {
 			background-color: color(DarkDark);
 			color: color(Green);
+		}
+	}
+	&__title {
+		& + .search-box__header {
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 0.4em;
+				height: 0.4em;
+				border-top: 0.1em solid color(Green);
+				border-right: 0.1em solid color(Green);
+				transform: rotate(45deg);
+
+				margin-right: 0.5em;
+			}
 		}
 	}
 	@media #{$small-only} {
