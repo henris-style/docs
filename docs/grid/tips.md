@@ -4,7 +4,7 @@
 Keep a few rules in mind, this will keep you away from a lot of debugging:
 
 
-## Mobile first 
+### Mobile first 
 
 Work from small to large (mobile first), also in the classes. 
 	
@@ -12,7 +12,7 @@ For instance:
 	
 __Good:__
 
-```css
+```html
 	<div class="column small-full large-half xlarge-third">
 		...
 	</div>
@@ -21,19 +21,19 @@ __Good:__
 __Bad:__
 
 
-```css
+```html
 	<div class="xlarge-third large-half small-full column">
 		...
 	</div>
 ```	
 
-## Named classes
+### Use named classes
 
 Try to use named classes as much as possible. When changing up your total grid size, everything which is named will still work. If you use the numbered once, stuff might break.
 
 __Good:__
 
-```css
+```html
 	<div class="column small-full large-half">
 		...
 	</div>
@@ -41,7 +41,7 @@ __Good:__
 
 __Bad:__
 
-```css
+```html
 	<div class="column small-full large-12">
 		...
 	</div>

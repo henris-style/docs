@@ -36,7 +36,7 @@ h4{
 	@include min-(font-size, .3, 16);
 }
 
-p{
+td,th,p{
 	font-size: 1rem;
 	line-height: 1.75;
 }

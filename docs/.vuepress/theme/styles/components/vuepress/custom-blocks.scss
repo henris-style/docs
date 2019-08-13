@@ -13,12 +13,11 @@
 	}
 	&.tip {
 		border-color: color(Green);
-		background-color: color(IceLight);
+		background-color: color(GreenLight, 0.25);
 	}
 	&.warning {
-		border-color: color(Yellow);
-		background-color: color(Brown, 0.25);
-		color: color(Brown);
+		border-color: color(Orange);
+		background-color: color(OrangeLight, 0.25);
 		.custom-block-title {
 			color: color(Brown);
 		}
@@ -27,11 +26,10 @@
 		}
 	}
 	&.danger {
-		border-color: color(Red, 0.2);
-		background-color: color(White);
-		color: darken(Red, 0.2);
+		border-color: color(Red);
+		background-color: color(RedLight, 0.25);
 		.custom-block-title {
-			color: darken(red, 40%);
+			color: darken(Red, 40%);
 		}
 		a {
 			color: $textColor;

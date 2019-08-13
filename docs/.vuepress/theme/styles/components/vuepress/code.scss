@@ -6,6 +6,7 @@
 		font-size: 0.85em;
 		padding: 0.25rem 0.5rem;
 		margin: 0;
+		white-space: nowrap;
 		.token {
 			&.deleted {
 				color: #ec5975;
