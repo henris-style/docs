@@ -29,6 +29,6 @@ export default {
 <style lang="scss">
 @import '../styles/tools';
 .dropdown-enter, .dropdown-leave-to {
-  height: 0 !important;
+	height: 0 !important;
 }
 </style>

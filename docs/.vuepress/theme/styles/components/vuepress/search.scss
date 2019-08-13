@@ -4,50 +4,39 @@
 	right: 0;
 	min-width: $navbarHeight;
 	height: $navbarHeight;
-	@media #{$small-only} {
-		width: $navbarHeight;
-		right: $navbarHeight;
-		transition: width $base-transition $base-cubic-bezier;
-		&.focused {
-			width: $navbarHeight * 4;
-			.search-box__icon{
-				transform: translateY(-50%) scale(1.2);
-			}
-		}
-	}
 
 	&__icon {
 		position: absolute;
-		left: 0;
 		top: 50%;
-		height: $navbarHeight;
+		left: 0;
+		z-index: 3;
 		width: $navbarHeight;
+		height: $navbarHeight;
 		color: color(Dark);
 		font-size: 10px;
 		transform: translateY(-50%) scale(1);
-		z-index: 3;
-		pointer-events: none;
 		transition: $base-transition $base-cubic-bezier;
+		pointer-events: none;
 		&::before {
 			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
 			width: 1em;
 			height: 1em;
 			border: 0.2em solid currentColor;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,-50%);
 			border-radius: 50%;
+			transform: translate(-50%, -50%);
 			transition: $base-transition $base-cubic-bezier;
 		}
 		&::after {
 			content: '';
+			position: absolute;
+			top: calc(50% + 0.5em);
+			left: calc(50% + 0.5em);
 			width: 0.2em;
 			height: 0.5em;
 			background-color: currentColor;
-			position: absolute;
-			left: calc(50% + 0.5em);
-			top: calc(50% + 0.5em);
 			transform: rotate(-45deg);
 			transform-origin: 0 0;
 			transition: $base-transition $base-cubic-bezier;
@@ -58,12 +47,15 @@
 		position: relative;
 		left: 0rem;
 		width: 100%;
-		font-size: 1rem;
 		height: $navbarHeight;
+		border: none;
+		border-radius: 0;
+		background-color: color(Yellow);
+
+		font-weight: bold;
+		font-size: 1rem;
 		padding: 1rem;
 		padding-left: $navbarHeight;
-		background-color: color(Yellow);
-		border: none;
 		padding-right: 0;
 		&::placeholder {
 			color: color(Black, 0.25);
@@ -73,8 +65,6 @@
 			background-color: color(YellowDark);
 		}
 
-		font-weight: bold;
-
 		&:focus {
 			border: none;
 			color: color(Dark);
@@ -83,33 +73,44 @@
 
 	&__suggestions {
 		position: absolute;
-		right: 0;
 		top: 0;
-		border: none;
-		padding: 0;
-		background-color: color(Dark);
-		border-radius: 0;
 		top: $navbarHeight;
+		right: 0;
 		min-width: 100%;
+		border: none;
+		border-radius: 0;
+		background-color: color(Dark);
+		padding: 0;
 		// position: fixed; right: $navbarHeight;
 	}
 	&__suggestion {
-		padding: 0;
-		border-radius: 0;
 		display: block;
+		border-radius: 0;
 		color: white;
+		padding: 0;
 		&.focused {
 			background-color: color(White);
 			color: color(Dark);
 		}
 	}
 	&__link {
-		color: currentColor;
 		display: block;
+		color: currentColor;
 		padding: 0.5rem 1rem;
 		&:hover {
 			background-color: color(DarkDark);
 			color: color(Green);
+		}
+	}
+	@media #{$small-only} {
+		right: $navbarHeight;
+		width: $navbarHeight;
+		transition: width $base-transition $base-cubic-bezier;
+		&.focused {
+			width: $navbarHeight * 4;
+			.search-box__icon {
+				transform: translateY(-50%) scale(1.2);
+			}
 		}
 	}
 }

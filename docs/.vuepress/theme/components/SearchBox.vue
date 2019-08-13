@@ -1,8 +1,8 @@
 <template>
 	<div class="search-box" :class="{ focused: focused }">
-    <span class="search-box__icon"></span>
+		<span class="search-box__icon"></span>
 		<input
-      class="search-box__input"
+			class="search-box__input"
 			@input="query = $event.target.value"
 			aria-label="Search"
 			:value="query"
@@ -16,16 +16,13 @@
 			@keyup.up="onUp"
 			@keyup.down="onDown"
 		/>
-		<!-- <ul
-      class="suggestions"
-      :class="{ 'align-right': alignRight, 'suggestions--active' : showSuggestions }"       @mouseleave="unfocus"
-    > -->
 		<ul
 			class="search-box__suggestions"
 			:class="{
 				'align-right': alignRight,
 				'suggestions--active': showSuggestions
 			}"
+			@mouseleave="unfocus"
 		>
 			<li
 				class="search-box__suggestion"
@@ -35,8 +32,12 @@
 				@mouseenter="focus(i)"
 			>
 				<a class="search-box__link" :href="s.path" @click.prevent>
-					<span class="search-box__title page-title">{{ s.title || s.path }}</span>
-					<span class="search-box__header header" v-if="s.header">&gt; {{ s.header.title }}</span>
+					<span class="search-box__title page-title">{{
+						s.title || s.path
+					}}</span>
+					<span class="search-box__header header" v-if="s.header"
+						>&gt; {{ s.header.title }}</span
+					>
 				</a>
 			</li>
 		</ul>
@@ -180,95 +181,3 @@ export default {
 	}
 };
 </script>
-
-//
-<style lang="stylus">
-// // .search-box
-// //   display inline-block
-// //   position relative
-// //   margin-right 1rem
-// //   input
-// //     cursor text
-// //     width 10rem
-// //     height: 2rem
-// //     color lighten($textColor, 25%)
-// //     display inline-block
-// //     border 1px solid darken($borderColor, 10%)
-// //     border-radius 2rem
-// //     font-size 0.9rem
-// //     line-height 2rem
-// //     padding 0 0.5rem 0 2rem
-// //     outline none
-// //     transition all .2s ease
-// //     background #fff url(search.svg) 0.6rem 0.5rem no-repeat
-// //     background-size 1rem
-// //     &:focus
-// //       cursor auto
-// //       border-color $accentColor
-// //   .suggestions
-// //     background #fff
-// //     width 20rem
-// //     position absolute
-// //     top 1.5rem
-// //     border 1px solid darken($borderColor, 10%)
-// //     border-radius 6px
-// //     padding 0.4rem
-// //     list-style-type none
-// //     &.align-right
-// //       right 0
-// //   .suggestion
-// //     line-height 1.4
-// //     padding 0.4rem 0.6rem
-// //     border-radius 4px
-// //     cursor pointer
-// //     a
-// //       white-space normal
-// //       color lighten($textColor, 35%)
-// //       .page-title
-// //         font-weight 600
-// //       .header
-// //         font-size 0.9em
-// //         margin-left 0.25em
-// //     &.focused
-// //       background-color #f3f4f5
-// //       a
-// //         color $accentColor
-
-// // @media (max-width: $MQNarrow)
-// //   .search-box
-// //     input
-// //       cursor pointer
-// //       width 0
-// //       border-color transparent
-// //       position relative
-// //       &:focus
-// //         cursor text
-// //         left 0
-// //         width 10rem
-
-// // // Match IE11
-// // @media all and (-ms-high-contrast: none)
-// //   .search-box input
-// //     height 2rem
-
-// // @media (max-width: $MQNarrow) and (min-width: $MQMobile)
-// //   .search-box
-// //     .suggestions
-// //       left 0
-
-// // @media (max-width: $MQMobile)
-// //   .search-box
-// //     margin-right 0
-// //     input
-// //       left 1rem
-// //     .suggestions
-// //       right 0
-
-// // @media (max-width: $MQMobileNarrow)
-// //   .search-box
-// //     .suggestions
-// //       width calc(100vw - 4rem)
-// //     input:focus
-// //       width 8rem
-//
-</style>

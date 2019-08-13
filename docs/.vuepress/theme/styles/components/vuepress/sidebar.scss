@@ -8,27 +8,27 @@
 }
 
 .sidebar {
-	width: $sidebarWidth;
 	position: fixed;
-	z-index: 10;
-	margin: 0;
 	top: 0;
-	left: 0;
 	bottom: 0;
+	left: 0;
+	z-index: 10;
+	width: $sidebarWidth;
 	box-sizing: border-box;
 	background-color: color(Dark, 0.15);
 	color: color(Dark);
-  overflow-y: auto;
-  @media #{$small-only}{
-		padding-top: $navbarHeight;
-    background-color: color(Dark);
+	overflow-y: auto;
+	margin: 0;
+	@media #{$small-only}{
+		background-color: color(Dark);
 		color: color(White);
-		transition: clip-path $base-transition $base-cubic-bezier;
 		clip-path: inset(0 100% 0 0%);
+		transition: clip-path $base-transition $base-cubic-bezier;
+		padding-top: $navbarHeight;
 		.sidebar-open & {
 			clip-path: inset(0 0% 0 0%);
 		}
-  }
+	}
 	&__links {
 		display: block;
 		margin: 0;
@@ -38,16 +38,16 @@
 	}
 	&__link {
 		display: block;
-		padding: 0.5rem 2rem;
 		color: currentColor;
+		padding: 0.5rem 2rem;
 		&.active {
 			color: $accentColor;
 		}
 	}
 	&__heading{
-		padding: .5rem 2rem;
 		display: block; 
 		font-weight: bold;
+		padding: .5rem 2rem;
 	}
 	&__group{
 		margin-top: 1rem;
@@ -56,25 +56,25 @@
 		// border: 1px solid blue;
 	}
 	&__sub-headers {
-		padding-left: 1rem;
 		display: block;
 		border: 1px slid red;
+		padding-left: 1rem;
 	}
 	&__button {
-		cursor: pointer;
 		position: absolute;
-		background-color: color(Dark);
+		top: 0;
+		right: 0;
 		width:$navbarHeight;
 		height:$navbarHeight;
-		right: 0;
-		top: 0;
-		border: none; 
+		border: none;
+		background-color: color(Dark);
+		clip-path: inset(0 0 0 100%); 
 		transition: clip-path $base-transition $base-cubic-bezier;
-		clip-path: inset(0 0 0 100%);
 		animation: IOSfixClose $base-transition forwards;
+		cursor: pointer;
 		&:focus,&:hover{
 			outline: none; 
-		background-color: color(Green);
+			background-color: color(Green);
 		}
 		span {
 			@include menu();
@@ -85,8 +85,8 @@
 			}
 		}
 		@media #{$small-only}{
-			animation: IOSfixOpen $base-transition forwards;
 			clip-path: inset(0 0 0 0);
+			animation: IOSfixOpen $base-transition forwards;
 		}
 	}
 }

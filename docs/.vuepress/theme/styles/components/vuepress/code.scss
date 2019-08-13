@@ -1,11 +1,11 @@
 #{$contentClass} {
 	code {
+		border-radius: 3px;
+		background-color: color(IceLight);
 		color: lighten($textColor, 20%);
+		font-size: 0.85em;
 		padding: 0.25rem 0.5rem;
 		margin: 0;
-		font-size: 0.85em;
-		background-color: color(IceLight);
-		border-radius: 3px;
 		.token {
 			&.deleted {
 				color: #ec5975;
@@ -20,16 +20,16 @@
 #{$contentClass} {
 	pre,
 	pre[class*='language-'] {
+		background-color: $codeBgColor;
 		line-height: 1.4;
+		overflow: auto;
 		padding: 1.25rem 1.5rem;
 		margin: 0.85rem 0;
-		background-color: $codeBgColor;
-		overflow: auto;
 		code {
+			border-radius: 0;
+			background-color: transparent;
 			color: #fff;
 			padding: 0;
-			background-color: transparent;
-			border-radius: 0;
 		}
 	}
 }
@@ -38,30 +38,30 @@ div[class*='language-'] {
 	position: relative;
 	background-color: $codeBgColor;
 	.highlight-lines {
-		user-select: none;
-		padding-top: 1.3rem;
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		line-height: 1.4;
+		user-select: none;
+		padding-top: 1.3rem;
 		.highlighted {
 			background-color: rgba(0, 0, 0, 66%);
 		}
 	}
 	pre,
 	pre[class*='language-'] {
-		background: transparent;
 		position: relative;
 		z-index: 1;
+		background: transparent;
 	}
 	&::before {
 		position: absolute;
-		z-index: 3;
 		top: 0.8em;
 		right: 1em;
-		font-size: 0.75rem;
+		z-index: 3;
 		color: rgba(255, 255, 255, 0.4);
+		font-size: 0.75rem;
 	}
 	&:not(.line-numbers-mode) {
 		.line-numbers-wrapper {
@@ -74,9 +74,9 @@ div[class*='language-'] {
 			&:before {
 				content: ' ';
 				position: absolute;
-				z-index: 3;
-				left: 0;
 				top: 0;
+				left: 0;
+				z-index: 3;
 				display: block;
 				width: $lineNumbersWrapperWidth;
 				height: 100%;
@@ -91,30 +91,30 @@ div[class*='language-'] {
 			position: absolute;
 			top: 0;
 			width: $lineNumbersWrapperWidth;
-			text-align: center;
 			color: rgba(255, 255, 255, 0.3);
-			padding: 1.25rem 0;
 			line-height: 1.4;
+			text-align: center;
+			padding: 1.25rem 0;
 			br {
 				user-select: none;
 			}
 			.line-number {
 				position: relative;
 				z-index: 4;
-				user-select: none;
 				font-size: 0.85em;
+				user-select: none;
 			}
 		}
 		&::after {
 			content: '';
 			position: absolute;
-			z-index: 2;
 			top: 0;
 			left: 0;
+			z-index: 2;
 			width: $lineNumbersWrapperWidth;
 			height: 100%;
-			border-radius: 6px 0 0 6px;
 			border-right: 1px solid rgba(0, 0, 0, 66%);
+			border-radius: 6px 0 0 6px;
 			background-color: $codeBgColor;
 		}
 	}
@@ -191,16 +191,16 @@ $monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 /* Code blocks */
 /* Inline code */
 code[class*='language-'] {
-	color: $color_1;
 	background: none;
-	font-family: $monospace-font;
+	color: $color_1;
 	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
+	font-family: $monospace-font;
 	line-height: 1.5;
+	white-space: pre;
+	text-align: left;
+	word-wrap: normal;
+	word-break: normal;
+	word-spacing: normal;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -210,16 +210,17 @@ code[class*='language-'] {
 	hyphens: none;
 }
 pre[class*='language-'] {
-	color: $color_1;
 	background: none;
-	font-family: $monospace-font;
+	background: #2d2d2d;
+	color: $color_1;
 	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
+	font-family: $monospace-font;
 	line-height: 1.5;
+	white-space: pre;
+	text-align: left;
+	word-wrap: normal;
+	word-break: normal;
+	word-spacing: normal;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -227,17 +228,16 @@ pre[class*='language-'] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+	overflow: auto;
 	padding: 1em;
 	margin: 0.5em 0;
-	overflow: auto;
-	background: #2d2d2d;
 }
 :not(pre) {
 	> code[class*='language-'] {
-		background: #2d2d2d;
-		padding: 0.1em;
 		border-radius: 0.3em;
+		background: #2d2d2d;
 		white-space: normal;
+		padding: 0.1em;
 	}
 }
 .token.comment {

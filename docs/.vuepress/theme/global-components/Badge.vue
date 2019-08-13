@@ -30,13 +30,13 @@ export default {
 <style lang="scss" scoped>
 .badge {
 	display: inline-block;
-	font-size: 14px;
 	height: 18px;
-	line-height: 18px;
 	border-radius: 3px;
-	padding: 0 6px;
-	color: white;
 	background-color: #42b983;
+	color: white;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 0 6px;
 	&.tip,
 	&.green {
 		background-color: #42b983;
