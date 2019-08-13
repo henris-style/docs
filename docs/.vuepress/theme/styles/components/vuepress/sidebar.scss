@@ -29,14 +29,14 @@
 			clip-path: inset(0 0% 0 0%);
 		}
   }
-	&-links {
+	&__links {
 		display: block;
 		margin: 0;
 		li {
 			display: block;
 		}
 	}
-	&-link {
+	&__link {
 		display: block;
 		padding: 0.5rem 2rem;
 		color: currentColor;
@@ -44,23 +44,23 @@
 			color: $accentColor;
 		}
 	}
-	&-heading{
+	&__heading{
 		padding: .5rem 2rem;
 		display: block; 
 		font-weight: bold;
 	}
-	&-group{
+	&__group{
 		margin-top: 1rem;
 	}
-	&-group-items{
+	&__group-items{
 		// border: 1px solid blue;
 	}
-	&-sub-headers {
+	&__sub-headers {
 		padding-left: 1rem;
 		display: block;
 		border: 1px slid red;
 	}
-	&-button {
+	&__button {
 		cursor: pointer;
 		position: absolute;
 		background-color: color(Dark);

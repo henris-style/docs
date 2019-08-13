@@ -1,6 +1,6 @@
 <template>
   <section
-    class="sidebar-group"
+    class="sidebar__group"
     :class="[
       {
         collapsable,
@@ -11,7 +11,7 @@
   >
     <router-link
       v-if="item.path"
-      class="sidebar-heading clickable"
+      class="sidebar__heading clickable"
       :class="{
         open,
         'active': isActive($route, item.path)
@@ -29,7 +29,7 @@
 
     <p
       v-else
-      class="sidebar-heading"
+      class="sidebar__heading"
       :class="{ open }"
       @click="$emit('toggle')"
     >
@@ -43,7 +43,7 @@
 
     <DropdownTransition>
       <SidebarLinks
-        class="sidebar-group-items"
+        class="sidebar__group-items"
         :items="item.children"
         v-if="open || !collapsable"
         :sidebarDepth="item.sidebarDepth"

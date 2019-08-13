@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="sidebar-links"
+    class="sidebar__links"
     v-if="items.length"
   >
     <li v-for="(item, i) in items" :key="i">

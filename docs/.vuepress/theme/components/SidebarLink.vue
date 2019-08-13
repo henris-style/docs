@@ -70,7 +70,7 @@ function renderLink(h, to, text, active) {
 			},
 			class: {
 				active,
-				'sidebar-link': true
+				'sidebar__link': true
 			}
 		},
 		text
@@ -81,10 +81,10 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 	if (!children || depth > maxDepth) return null;
 	return h(
 		'ul',
-		{ class: 'sidebar-sub-headers' },
+		{ class: 'sidebar__sub-headers' },
 		children.map((c) => {
 			const active = isActive(route, path + '#' + c.slug);
-			return h('li', { class: 'sidebar-sub-header' }, [
+			return h('li', { class: 'sidebar__sub-header' }, [
 				renderLink(h, path + '#' + c.slug, c.title, active),
 				renderChildren(h, c.children, path, route, maxDepth, depth + 1)
 			]);
@@ -102,7 +102,7 @@ function renderExternal(h, to, text) {
 				rel: 'noopener noreferrer'
 			},
 			class: {
-				'sidebar-link': true
+				'sidebar__link': true
 			}
 		},
 		[text, h('OutboundLink')]
