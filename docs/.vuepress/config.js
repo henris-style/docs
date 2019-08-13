@@ -17,7 +17,7 @@ module.exports = {
       ]    },
 			{
 				title: 'Functions',
-				path: '/functions/',
+				// path: '/functions/',
 				collapsable: false,
 				sidebarDepth: 1,
 				children: [

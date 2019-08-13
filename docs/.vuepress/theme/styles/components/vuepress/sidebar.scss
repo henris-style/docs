@@ -63,7 +63,7 @@
 	&-button {
 		cursor: pointer;
 		position: absolute;
-		background-color: color(Blue);
+		background-color: color(Dark);
 		width:$navbarHeight;
 		height:$navbarHeight;
 		right: 0;
@@ -74,7 +74,7 @@
 		animation: IOSfixClose $base-transition forwards;
 		&:focus,&:hover{
 			outline: none; 
-		background-color: color(BlueDark);
+		background-color: color(Green);
 		}
 		span {
 			@include menu();
