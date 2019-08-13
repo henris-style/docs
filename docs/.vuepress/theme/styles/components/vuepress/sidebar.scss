@@ -1,3 +1,12 @@
+@keyframes IOSfixOpen{
+	0%{ top: 0; }
+	100%{ top: 0.01px; }
+}
+@keyframes IOSfixClose{
+	0%{ top: 0.01px; }
+	100%{ top: 0; }
+}
+
 .sidebar {
 	width: $sidebarWidth;
 	position: fixed;
@@ -62,6 +71,7 @@
 		border: none; 
 		transition: clip-path $base-transition $base-cubic-bezier;
 		clip-path: inset(0 0 0 100%);
+		animation: IOSfixClose $base-transition forwards;
 		&:focus,&:hover{
 			outline: none; 
 		background-color: color(BlueDark);
@@ -75,6 +85,7 @@
 			}
 		}
 		@media #{$small-only}{
+			animation: IOSfixOpen $base-transition forwards;
 			clip-path: inset(0 0 0 0);
 		}
 	}
