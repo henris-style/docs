@@ -1,0 +1,33 @@
+.content__default {
+	table {
+		border: 1px solid color(IceLight);
+		td,
+		th {
+			padding: 1rem;
+		}
+		tr {
+			border: 1px solid color(IceLight);
+		}
+		tbody {
+			tr {
+				&:nth-child(odd) {
+					background-color: color(IceLight, 0.25);
+				}
+			}
+		}
+	}
+
+	blockquote {
+		padding: 2rem;
+	}
+
+	ul {
+		li {
+			display: block;
+			line-height: 1.75;
+			&:before {
+				content: '- ';
+			}
+		}
+	}
+}

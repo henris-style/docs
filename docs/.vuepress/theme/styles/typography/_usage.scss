@@ -9,3 +9,34 @@ h6 {
     font-weight: 400;
   }
 }
+
+
+h1{
+  font-size: grid(1);
+  line-height: 1;
+  @include max-(font-size, 1, 96);
+  @include min-(font-size, 1, 36);
+}
+h2{
+  font-size: grid(.6);
+  line-height: 1;
+  @include max-(font-size, .6, 64);
+  @include min-(font-size, .6, 32);
+}
+h3{
+  font-size: grid(.4);
+  line-height: 1.25;
+  @include max-(font-size, .4, 36);
+  @include min-(font-size, .4, 20);
+}
+h4{
+  font-size: grid(.3);
+  line-height: 1.25;
+  @include max-(font-size, .3, 24);
+  @include min-(font-size, .3, 16);
+}
+
+p{
+  font-size: 1rem;
+  line-height: 1.75;
+}
