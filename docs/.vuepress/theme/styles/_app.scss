@@ -4,6 +4,7 @@
 
 // Define output settings for project
 $output: set-output(css, true);
+$output: set-output(full, true);
 
 // Output the whole framework
 @import '~@henris/next';

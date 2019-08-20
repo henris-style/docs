@@ -20,7 +20,7 @@ module.exports = {
 			{
 				title: 'Color',
 				collapsable: false,
-				children: ['color/custom']
+				children: ['color/custom', 'color/contra']
 			},
 			{
 				title: 'Animation',
