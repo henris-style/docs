@@ -28,25 +28,23 @@ You can use it as following;
 
 ```scss
 
-  .element{
-  	
-  	width: 500px; 
-  	height: 400px;
-  	
-  	// For tablets
-  	@media #{$medium-only}{
-  		width: 100vw; 
-  		height: 500px; 
-  	}
-  	
-  	
-  	// For mobile screens
-  	@media #{$small-only}{
-  		width: 100vw; 
-  		height: 100vw; 
-  	}
-  	
+.element{
+	
+	width: 500px; 
+	height: 400px;
+	
+	// For tablets
+	@media #{$medium-only}{
+		width: 100vw; 
+		height: 500px; 
 	}
+	
+	// For mobile screens
+	@media #{$small-only}{
+		width: 100vw; 
+		height: 100vw; 
+	}
+}
 	
 ```
 
