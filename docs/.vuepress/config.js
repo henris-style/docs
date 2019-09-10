@@ -26,7 +26,8 @@ module.exports = {
 				title: 'Animation',
 				collapsable: false,
 				children: [
-					/* ... */
+					'animation/easing',
+					'animation/transition',
 				]
 			},
 			{
