@@ -34,8 +34,17 @@ module.exports = {
 				path: '/typography/'
 			},
 			{
-				title: 'Functions',
+				title: 'Forms',
 				collapsable: false,
+				sidebarDepth: 1,
+				children: [
+					'forms/input-check-radio',
+					'forms/input-range'
+				]
+			},
+			{
+				title: 'Functions',
+				collapsable: true,
 				sidebarDepth: 1,
 				children: [
 					'functions/utils/characters',
@@ -49,7 +58,7 @@ module.exports = {
 			},
 			{
 				title: 'Mixins',
-				collapsable: false,
+				collapsable: true,
 				children: [
 					'mixins/utils/family',
 					'mixins/utils/wildcard',
