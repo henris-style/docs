@@ -56,12 +56,13 @@ Lets make it red at the same time as it jumps over to the set `36px`;
 ```
 ```scss
 h1 { 
+	padding: 1rem;
 	font-size: grid(.75); 
 	@include min-(font-size,1,36px){
-		background-color: red;
+		background-color: #FE688E; // red
 	}
 	@include max-(font-size,1,96px){
-		background-color: blue;
+		background-color: #65CCFA; // blue
 	}
 }
 ```
@@ -71,16 +72,16 @@ This will result in an element like this:
 <div class="html-example" note="Resize the window to see">
 <h1 class="test-3">The quick brown fox jumps over the lazy dog</h1>
 <style>
-	.test-3{ font-size: calc(100vw/24); } 
+	.test-3{ padding: 1rem; font-size: calc(100vw/24); } 
 	@media only screen and (max-width: 864px){ 
 	 .test-3{	
 			 font-size: 64px; 
-			 background-color: red;
+			 background-color: #FE688E;
 		}
 	}@media only screen and (min-width: 2304px){ 
 	 .test-3{	
 			 font-size: 96px; 
-			 background-color: blue;
+			 background-color: #65CCFA;
 		}
 	}
 </style>
@@ -106,15 +107,16 @@ In that case you can use the mixins also without the property and just use the c
 ```
 ```scss
 h1 { 
+	padding: 1rem;
 	&::before{
 		content: "This is the normal size";
 	}
 	@include min-(1,36px){
-		background-color: purple; 
+		background-color: #770D8D // purple; 
 		&::before{ content: "I am on a small screen now"; }
 	}
 	@include max-(font-size,1,96px){
-		background-color: green; 
+		background-color: #B8D3A5; // green 
 		&::before{ content: "Now your window is big"; }
 	}
 	
@@ -126,17 +128,24 @@ This will result in an element like this:
 <div class="html-example" note="Resize the window to see">
 <h1 class="test-4"></h1>
 <style>
+	.test-4{
+		padding: 1rem;
+	}
 	.test-4::before{
 		content: "This is the normal size";
 	}
 	@media only screen and (max-width: 864px){ 
-	 .test-4::before{	
-		background-color: purple; 
+	 .test-4{	
+			background-color: #770D8D;
+		} 
+		.test-4::before{	
 			content: "I am on a small screen now";
 		}
 	}@media only screen and (min-width: 2304px){ 
+	 .test-4{
+			background-color: #B8D3A5;
+		}
 	 .test-4::before{	
-			background-color: green; 
 			content: "Now your window is big"; 
 		}
 	}
