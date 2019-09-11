@@ -135,8 +135,8 @@ This will result in an element like this:
 			content: "I am on a small screen now";
 		}
 	}@media only screen and (min-width: 2304px){ 
-	 .test-4{	
-		background-color: green; 
+	 .test-4::before{	
+			background-color: green; 
 			content: "Now your window is big"; 
 		}
 	}
