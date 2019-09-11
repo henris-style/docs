@@ -35,7 +35,7 @@ bash <(curl -s https://raw.githubusercontent.com/henris-style/setup-files/master
 $output: set-output(css, true);
 
 // Output the whole framework
-@import '~henris/next';
+@import '~henris';
 @import 'tools/post';
 ```
 

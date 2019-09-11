@@ -15,7 +15,7 @@ module.exports = {
 			{
 				title: 'Grid',
 				collapsable: false,
-				children: ['grid/basic', 'grid/classes', 'grid/structure', 'grid/media-queries', 'grid/tips']
+				children: ['grid/basic', 'grid/classes', 'grid/structure', 'grid/media-queries',  'grid/min-max', 'grid/tips']
 			},
 			{
 				title: 'Color',

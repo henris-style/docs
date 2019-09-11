@@ -15,3 +15,17 @@ $output: set-output(full, true);
 // Theme
 @import 'typography/typography';
 @import 'components/index';
+
+
+.html-example{
+	background-color: color(Dark,.1); border: 1px solid color(Dark,.2);
+	padding: grid(1);
+	position: relative;
+	@include min-(padding,1,32px);
+	&::before{
+		content: attr(note);
+		display: block; padding: .5rem .75rem; font-size: 14px;
+		position: absolute; bottom: 1rem; right: 1rem; 
+		background-color: color(Dark); color: color(White); 
+	}
+}
