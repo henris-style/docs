@@ -38,6 +38,7 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 1,
 				children: [
+					'forms/input-text',
 					'forms/input-check-radio',
 					'forms/input-range'
 				]
@@ -67,15 +68,15 @@ module.exports = {
 				]
 			},
 
-			{
-				title: 'Styled',
-				collapsable: false,
-				children: [
-					'basic/buttons',
-					'basic/forms',
-					'basic/patterns'
-				]
-			}
+			// {
+			// 	title: 'Styled',
+			// 	collapsable: false,
+			// 	children: [
+			// 		'basic/buttons',
+			// 		'basic/forms',
+			// 		'basic/patterns'
+			// 	]
+			// }
 		]
 	}
 };
