@@ -2,13 +2,33 @@
 
 Styling input fields can be a pain, but Henri's makes it a little easier without losing all control. The only thing necessary is just to keep up with a simple buildup.
 
+<div class="html-example">
+<form>
+	<div class="input-text">
+		<input type="text">
+		<label>Name</label>
+	</div>
+	<div class="input-text">
+		<input type="email">
+		<label>E-mail</label>
+	</div>
+	<div class="input-text">
+		<input type="email">
+		<label>E-mail</label>
+	</div>	
+	<div class="input-switch">
+		<input type="checkbox" id="input-switch-test1">
+		<label for="input-switch-test1">Yeah</label>
+	</div>
+</form>
+</div>
 
 #### Simple Example
 
 ```html
 <section class="my-section">
 	...
-	<div class="input-container">
+	<div class="input-text">
 		<input type="text" id="my-input" placeholder="John Doe" />
 		<label>Name</label> 
 	</div>
@@ -19,9 +39,16 @@ Styling input fields can be a pain, but Henri's makes it a little easier without
 
 ```scss
 .my-section{
-	@include input-text-container('.input-container');
+	@include input-text-container('.input-text');
 }
 ```
+
+<div class="html-example">
+	<div class="input-text">
+		<input type="text" id="my-input" placeholder="John Doe" />
+		<label>Name</label> 
+	</div>
+</div>
 
 You don't have to be "unlogically" turning the input and the label around, but in order to give your field some extra interaction, this is necessary.  If you don't you will just loose that. Just make sure to "unreverse" the container with `$input-text-container-reverse: false;` before the include.
 

@@ -36,12 +36,14 @@ module.exports = {
 			},
 			{
 				title: 'Forms',
+				path: '/forms/',
 				collapsable: false,
 				sidebarDepth: 1,
 				children: [
 					'forms/input-text',
 					'forms/input-check-radio',
-					'forms/input-range'
+					'forms/input-range',
+					'forms/input-switch'
 				]
 			},
 			{

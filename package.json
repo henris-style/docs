@@ -7,18 +7,18 @@
 		"doc": "docs"
 	},
 	"devDependencies": {
-		"@henris/next": "^1.0.18",
-		"node-sass": "^4.12.0",
-		"sass-loader": "^7.1.0",
 		"@henris/custom": "0.0.2",
 		"guyn": "0.0.10",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.0",
 		"stylelint": "^10.1.0",
-		"stylelint-order": "^3.0.1",
-		"stylelint-logical-order": "0.0.5",
-		"vuepress": "^1.0.1"
+		"stylelint-logical-order": "0.0.6",
+		"stylelint-order": "^3.1.0",
+		"vuepress": "^1.0.4"
 	},
 	"scripts": {
 		"test": "test",
+		"dev": "vuepress dev docs",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"stylelint": "stylelint 'docs/.vuepress/**/*.vue' 'docs/.vuepress/**/*.scss'",
@@ -71,5 +71,9 @@
 		"extends": [
 			"stylelint-logical-order"
 		]
+	},
+	"dependencies": {
+		"@henris/forms": "0.0.16",
+		"henris": "^1.2.8"
 	}
 }

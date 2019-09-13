@@ -7,7 +7,7 @@ $output: set-output(css, true);
 $output: set-output(full, true);
 
 // Output the whole framework
-@import '~@henris/next';
+@import '~henris';
 
 // Defined settings
 @import 'tools/post';
@@ -16,16 +16,29 @@ $output: set-output(full, true);
 @import 'typography/typography';
 @import 'components/index';
 
-
-.html-example{
-	background-color: color(Dark,.1); border: 1px solid color(Dark,.2);
+.html-example {
+	background-color: color(Dark, 0.05);
+	border: 1px solid color(Dark, 0.1);
 	padding: grid(1);
 	position: relative;
-	@include min-(padding,1,32px);
-	&::before{
+	@include min-(padding, 1, 32px);
+	&[note]::before {
 		content: attr(note);
-		display: block; padding: .5rem .75rem; font-size: 14px;
-		position: absolute; bottom: 1rem; right: 1rem; 
-		background-color: color(Dark); color: color(White); 
+		display: block;
+		padding: 0.5rem 0.75rem;
+		font-size: 14px;
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		background-color: color(Dark);
+		color: color(White);
 	}
+}
+
+body {
+	// @include input-text-container('.input-text');
+	// @include input-range-container('.input-range');
+	// @include input-checkbox-container('.input-checkbox');
+	// @include input-radio-container('.input-radio');
+	// @include input-switch-container('.input-switch');
 }

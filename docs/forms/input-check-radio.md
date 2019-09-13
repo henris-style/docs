@@ -2,6 +2,24 @@
 
 The Checkbox and radio inputs are quite similar, thats why you can style them in the same matter.
 
+
+<div class="html-example">
+<form>
+	<div class="input-checkbox">
+		<input type="checkbox" id="input-check-test1">
+		<label for="input-check-test1">How much?</label>
+	</div>
+	<div class="input-radio">
+		<input type="radio" name="radio1" id="input-radio-test1">
+		<label for="input-radio-test1">Yes</label>
+	</div>
+	<div class="input-radio">
+		<input type="radio" name="radio1" id="input-radio-test2">
+		<label for="input-radio-test2">No</label>
+	</div>
+</form>
+</div>
+
 ### Code Example 
 
 ```html
