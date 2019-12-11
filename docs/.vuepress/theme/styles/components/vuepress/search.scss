@@ -18,7 +18,7 @@
 		transition: $base-transition $base-cubic-bezier;
 		pointer-events: none;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -30,7 +30,7 @@
 			transition: $base-transition $base-cubic-bezier;
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			top: calc(50% + 0.5em);
 			left: calc(50% + 0.5em);
@@ -50,7 +50,7 @@
 		height: $navbarHeight;
 		border: none;
 		border-radius: 0;
-		background-color: color(Yellow);
+		background-color: color(_Yellow);
 
 		font-weight: bold;
 		font-size: 1rem;
@@ -113,7 +113,7 @@
 	&__title {
 		& + .search-box__header {
 			&:before {
-				content: '';
+				content: "";
 				display: inline-block;
 				width: 0.4em;
 				height: 0.4em;

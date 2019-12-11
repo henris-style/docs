@@ -1,7 +1,7 @@
 #{$contentClass} {
 	code {
 		border-radius: 3px;
-		background-color: color(IceDark,.25);
+		background-color: color(IceDark, 0.25);
 		color: lighten($textColor, 20%);
 		font-size: 0.85em;
 		padding: 0.25rem 0.5rem;
@@ -20,7 +20,7 @@
 
 #{$contentClass} {
 	pre,
-	pre[class*='language-'] {
+	pre[class*="language-"] {
 		background-color: $codeBgColor;
 		line-height: 1.4;
 		overflow: auto;
@@ -35,7 +35,7 @@
 	}
 }
 
-div[class*='language-'] {
+div[class*="language-"] {
 	position: relative;
 	background-color: $codeBgColor;
 	.highlight-lines {
@@ -51,7 +51,7 @@ div[class*='language-'] {
 		}
 	}
 	pre,
-	pre[class*='language-'] {
+	pre[class*="language-"] {
 		position: relative;
 		z-index: 1;
 		background: transparent;
@@ -73,7 +73,7 @@ div[class*='language-'] {
 		.highlight-lines .highlighted {
 			position: relative;
 			&:before {
-				content: ' ';
+				content: " ";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -107,7 +107,7 @@ div[class*='language-'] {
 			}
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -122,67 +122,67 @@ div[class*='language-'] {
 }
 
 @each $lang in $codeLang {
-	div[class~='language-#{$lang}'] {
+	div[class~="language-#{$lang}"] {
 		&:before {
-			content: '' + $lang;
+			content: "" + $lang;
 		}
 	}
 }
 
-div[class~='language-javascript'] {
+div[class~="language-javascript"] {
 	&:before {
-		content: 'js';
+		content: "js";
 	}
 }
 
-div[class~='language-typescript'] {
+div[class~="language-typescript"] {
 	&:before {
-		content: 'ts';
+		content: "ts";
 	}
 }
 
-div[class~='language-markup'] {
+div[class~="language-markup"] {
 	&:before {
-		content: 'html';
+		content: "html";
 	}
 }
 
-div[class~='language-markdown'] {
+div[class~="language-markdown"] {
 	&:before {
-		content: 'md';
+		content: "md";
 	}
 }
 
-div[class~='language-json']:before {
-	content: 'json';
+div[class~="language-json"]:before {
+	content: "json";
 }
 
-div[class~='language-ruby']:before {
-	content: 'rb';
+div[class~="language-ruby"]:before {
+	content: "rb";
 }
 
-div[class~='language-python']:before {
-	content: 'py';
+div[class~="language-python"]:before {
+	content: "py";
 }
 
-div[class~='language-bash']:before {
-	content: 'sh';
+div[class~="language-bash"]:before {
+	content: "sh";
 }
 
-div[class~='language-php']:before {
-	content: 'php';
+div[class~="language-php"]:before {
+	content: "php";
 }
 $color_1: color(Ice);
 $color_2: color(IceDark);
-$color_3: color(Magenta);
+$color_3: color(_Magenta);
 $color_4: color(Skyblue);
 $color_5: color(OrangeLight);
-$color_6: color(Yellow);
+$color_6: color(_Yellow);
 $color_7: color(MagentaLight);
-$color_8: color(Turquoise);
+$color_8: color(_Turquoise);
 $color_9: color(Cloud);
-$color_10: color(Green);
-$monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$color_10: color(_Green);
+$monospace-font: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
@@ -191,7 +191,7 @@ $monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
  */
 /* Code blocks */
 /* Inline code */
-code[class*='language-'] {
+code[class*="language-"] {
 	background: none;
 	color: $color_1;
 	font-size: 1em;
@@ -210,7 +210,7 @@ code[class*='language-'] {
 	-ms-hyphens: none;
 	hyphens: none;
 }
-pre[class*='language-'] {
+pre[class*="language-"] {
 	background: none;
 	background: #2d2d2d;
 	color: $color_1;
@@ -234,7 +234,7 @@ pre[class*='language-'] {
 	margin: 0.5em 0;
 }
 :not(pre) {
-	> code[class*='language-'] {
+	> code[class*="language-"] {
 		border-radius: 0.3em;
 		background: #2d2d2d;
 		white-space: normal;
