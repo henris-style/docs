@@ -63,6 +63,8 @@ module.exports = {
 				sidebarDepth: 1,
 				children: [
 					"functions/utils/characters",
+					"functions/utils/conditional",
+					"functions/utils/file-system",
 					"functions/utils/is",
 					"functions/utils/list",
 					"functions/utils/maps",
