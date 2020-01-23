@@ -3,73 +3,84 @@ module.exports = {
 	themeConfig: {
 		sidebar: [
 			{
-				title: 'Guide',
+				title: "Guide",
 				collapsable: false,
-				children: ['guide/getting-started', 'guide/installation']
+				children: ["guide/getting-started", "guide/installation"]
 			},
 			{
-				title: 'Installation',
-				collapsable: false,
-				children: ['installation/nuxt', 'installation/vuepress', 'installation/output', 'installation/settings']
-			},
-			{
-				title: 'Grid',
-				collapsable: false,
-				children: ['grid/basic', 'grid/classes', 'grid/structure', 'grid/media-queries',  'grid/min-max', 'grid/tips']
-			},
-			{
-				title: 'Color',
-				collapsable: false,
-				children: ['color/custom', 'color/contra']
-			},
-			{
-				title: 'Animation',
+				title: "Installation",
 				collapsable: false,
 				children: [
-					'animation/easing',
-					'animation/transition',
+					"installation/nuxt",
+					"installation/vuepress",
+					"installation/output",
+					"installation/settings"
 				]
 			},
 			{
-				title: 'Typography',
-				path: '/typography/'
+				title: "Grid",
+				collapsable: false,
+				children: [
+					"grid/basic",
+					"grid/classes",
+					"grid/structure",
+					"grid/media-queries",
+					"grid/min-max",
+					"grid/tips"
+				]
 			},
 			{
-				title: 'Forms',
-				path: '/forms/',
+				title: "Color",
+				collapsable: false,
+				children: ["color/custom", "color/contra"]
+			},
+			{
+				title: "Animation",
+				collapsable: false,
+				children: ["animation/easing", "animation/transition"]
+			},
+			{
+				title: "Typography",
+				collapsable: false,
+				path: "/typography/",
+				children: ["typography/load", "typography/usage"]
+			},
+			{
+				title: "Forms",
+				path: "/forms/",
 				collapsable: false,
 				sidebarDepth: 1,
 				children: [
-					'forms/input-text',
-					'forms/input-check-radio',
-					'forms/input-range',
-					'forms/input-switch'
+					"forms/input-text",
+					"forms/input-check-radio",
+					"forms/input-range",
+					"forms/input-switch"
 				]
 			},
 			{
-				title: 'Functions',
+				title: "Functions",
 				collapsable: true,
 				sidebarDepth: 1,
 				children: [
-					'functions/utils/characters',
-					'functions/utils/is',
-					'functions/utils/list',
-					'functions/utils/maps',
-					'functions/utils/size',
-					'functions/utils/strings',
-					'functions/utils/units'
+					"functions/utils/characters",
+					"functions/utils/is",
+					"functions/utils/list",
+					"functions/utils/maps",
+					"functions/utils/size",
+					"functions/utils/strings",
+					"functions/utils/units"
 				]
 			},
 			{
-				title: 'Mixins',
+				title: "Mixins",
 				collapsable: true,
 				children: [
-					'mixins/utils/family',
-					'mixins/utils/wildcard',
-					'mixins/utils/parent',
-					'mixins/styling/menu'
+					"mixins/utils/family",
+					"mixins/utils/wildcard",
+					"mixins/utils/parent",
+					"mixins/styling/menu"
 				]
-			},
+			}
 
 			// {
 			// 	title: 'Styled',

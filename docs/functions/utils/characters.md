@@ -17,7 +17,7 @@ example:
 @debug '| #{add-length('Henris',20)} |';
 @debug '| #{add-length('The Sass Toolbelt\'s,20)} |';
 
-/* 
+/*
 |                     |
 | Henris              |
 | The Sass Toolbelt   |
@@ -47,7 +47,6 @@ add-zeros(1,3);
 
 Create a string with given character times a given amount of times
 
-
 | Argument | Description                             |
 | -------- | --------------------------------------- |
 | string   | The input string                        |
@@ -62,7 +61,7 @@ example:
 @debug '| #{add-length('The Sass Toolbelt\'s,20)} |';
 @debug '| #{add-character('-',20)} |';
 
-/* 
+/*
 | -------------------- |
 |                      |
 | Henris               |
@@ -72,12 +71,9 @@ example:
 */
 ```
 
-
-
 ## safe-characters
 
 Convert special characters in strings to their simple equivalent to filter with characters.
-
 
 | Argument | Description      |
 | -------- | ---------------- |
@@ -86,22 +82,18 @@ Convert special characters in strings to their simple equivalent to filter with 
 example:
 
 ```scss
-
-$string: safe-characters('The quïck brown föx jumps over thé lazy døg');
+$string: safe-characters("The quïck brown föx jumps over thé lazy døg");
 
 // 'The quick brown fox jumps over the lazy dog'
-
 ```
 
 ## character-set
-
 
 Function which returns a list of characters of a certain type
 
 | Argument   | Description                              |
 | ---------- | ---------------------------------------- |
 | characters | Type of characters you want to get back. |
-
 
 | Option | Value                                                |
 | ------ | ---------------------------------------------------- |
@@ -110,17 +102,103 @@ Function which returns a list of characters of a certain type
 | a-Z    | abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ |
 | 0-9    | 01234556789                                          |
 
-
 ## allowed-characters
 
-Filters out all characters which arent allowed. 
+Filters out all characters which arent allowed.
 
 ```scss
+$string: allowed-characters(
+	"The quïck brown föx jumps over thé lazy døg",
+	character-set("a-z")
+);
 
-$string: allowed-characters('The quïck brown föx jumps over thé lazy døg',character-set('a-z'));
-
-// hequckbrownfxjumpsoverthlazydg 
+// hequckbrownfxjumpsoverthlazydg
 
 // Filters out spaces and special characters, because those are not in a-z list.
+```
 
+## nth-character
+
+Get the character on a certain index of the string.
+
+| Argument | Description       |
+| -------- | ----------------- |
+| str      | Input string      |
+| nth      | Index to be found |
+
+```scss
+$string: nth-character("Helvetica", 3);
+
+// l
+```
+
+## first-character
+
+Get the first character of a string.
+
+| Argument | Description  |
+| -------- | ------------ |
+| str      | Input string |
+
+```scss
+$string: first-character("Helvetica");
+
+// H
+```
+
+## last-character
+
+Get the last character of a string.
+
+| Argument | Description  |
+| -------- | ------------ |
+| str      | Input string |
+
+```scss
+$string: last-character("Helvetica");
+
+// a
+```
+
+## remove-character
+
+Remove a certain character by index from a string.
+
+| Argument | Description         |
+| -------- | ------------------- |
+| str      | Input string        |
+| index    | Index to be removed |
+
+```scss
+$string: remove-character("Helvetica", 3);
+
+// Hevetica
+```
+
+## remove-first-character
+
+Remove the first character from a string.
+
+| Argument | Description  |
+| -------- | ------------ |
+| str      | Input string |
+
+```scss
+$string: remove-first-character("Helvetica");
+
+// elvetica
+```
+
+## remove-last-character
+
+Remove the first character from a string.
+
+| Argument | Description  |
+| -------- | ------------ |
+| str      | Input string |
+
+```scss
+$string: remove-last-character("Helvetica");
+
+// Helvetic
 ```
